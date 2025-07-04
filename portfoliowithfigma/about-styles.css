@@ -1,0 +1,179 @@
+/* General body styles */
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #191a1a; /* Dark background color */
+    background-image: url("images/Niranjan Kottilingal.png");
+    background-size: cover;
+    background-position: center center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    height: 100vh;
+    animation: fadeIn 1s ease-out; /* Apply fade-in animation to the entire page */
+}
+
+/* Header and navigation styles */
+/* Header styles (Logo in top-left) */
+header {
+    position: fixed;
+    top: 20px; /* Keeping logo at the top-left corner */
+    left: 20px;
+    z-index: 10;
+}
+
+header .logo img {
+    width: 120px; /* Logo size */
+    height: auto;
+}
+
+/* Navigation Bar styles */
+nav {
+    position: fixed;
+    top: 50px;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: flex-end; /* Align items to the right */
+    padding-right: 20px;
+    z-index: 20;
+    animation: none; /* Remove fade-in animation for the navbar */
+}
+
+/* Navigation Bar List styles */
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+/* Navigation Item styles */
+nav ul li {
+    margin-left: 20px;
+}
+
+/* Navigation Link styles */
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+    font-weight: 400;
+    padding: 10px 20px;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #f0f0f0;
+    transform: scale(1.1);
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 5px;
+}
+
+/* About section styles */
+.about {
+    display: flex;
+    justify-content: space-between;
+    padding: 50px;
+    margin-top: 120px; /* Adjusted to avoid overlap with fixed navbar */
+    flex-wrap: wrap; /* Make the about section responsive */
+    opacity: 0; /* Start with the section hidden */
+    animation: fadeIn 2s ease-out forwards; /* Apply fade-in animation */
+}
+
+.about-content {
+    width: 60%; /* Content takes up 60% of the width */
+}
+
+.heading-container {
+    position: relative;
+    margin-bottom: 30px;
+    padding: 0 10px;
+}
+
+.heading {
+    font-size: 36px;
+    font-weight: bold;
+    color: white;
+    position: relative;
+    z-index: 1;
+    margin: 0;
+    padding: 10px 30px;
+    display: inline-block;
+}
+
+
+/* Paragraph Content Styles */
+.content {
+    font-size: 18px;
+    color: white;
+    margin-bottom: 20px;
+    text-align: justify;
+}
+
+/* Image Box styles */
+.image-box {
+    width: 306px;
+    height: 450px;
+    background-image: linear-gradient(45deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.3)), url("images/sample-image.jpg"); /* Ensure you use the same image URL */
+    border: 2px solid #2b2b2b;
+    position: absolute;
+    top: 130px;
+    left: 830px;
+    z-index: 1;
+    border-radius: 15px;
+    background-size: cover;
+    background-position: center;
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.3);
+}
+
+/* Image Box Hover effect */
+.image-box:hover {
+    transform: scale(1.05);
+    box-shadow: 0px 15px 30px rgba(0, 0, 0, 0.4);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* About Image styling */
+.about-image img {
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.3); /* Subtle shadow effect */
+}
+
+/* Disable navbar responsiveness on smaller screens */
+@media (max-width: 768px) {
+    nav ul {
+        display: flex; /* Keep the navbar horizontal */
+        justify-content: flex-end;
+    }
+
+    nav ul li {
+        margin-left: 20px; /* Ensure spacing remains */
+    }
+
+    /* Remove the stacking behavior on smaller screens */
+    .about {
+        display: flex;
+        justify-content: space-between;
+        padding: 50px;
+    }
+
+    .about-content {
+        width: 60%;
+    }
+
+    .about-image {
+        width: 35%; /* Image section remains the same size */
+    }
+}
+
+/* Animation for the page */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
