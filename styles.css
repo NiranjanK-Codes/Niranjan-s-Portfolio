@@ -1,0 +1,168 @@
+/* General body styles */
+body {
+    margin: 0;
+    padding: 0;
+    background-image: url("images/Niranjan Kottilingal.png");
+    background-size: cover;
+    background-position: center center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    height: 100vh;
+    font-family: 'Poppins', sans-serif;
+    animation: fadeIn 1s ease-out; /* Adding page animation */
+}
+
+/* Header styles (Logo in top-left) */
+header {
+    position: fixed;
+    top: 20px; /* Keeping logo at the top-left corner */
+    left: 20px;
+    z-index: 10;
+    animation: none; /* Remove fade-in animation for the header */
+}
+
+/* Logo styles */
+.logo img {
+    width: 120px;  /* Reduced size of the logo */
+    height: auto;
+}
+
+/* Navigation Bar styles */
+nav {
+    position: fixed;
+    top: 50px;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: flex-end; /* Align items to the right */
+    padding-right: 20px;
+    z-index: 20;
+    animation: none; /* Remove fade-in animation for the navbar */
+}
+
+/* Navigation Bar List styles */
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+/* Navigation Item styles */
+nav ul li {
+    margin-left: 20px;
+}
+
+/* Navigation Link styles */
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+    font-weight: 400;
+    padding: 10px 20px;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #f0f0f0;
+    transform: scale(1.1);
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 5px;
+}
+
+/* Main content section styles */
+.intro {
+    position: absolute;
+    top: 120px; /* Adjusted to move the text below the navbar */
+    left: 250px;
+    text-align: left;
+}
+
+.intro h1 {
+    font-size: 64px;
+    color: white;
+    font-weight: 300;
+    margin: 0;
+}
+
+.intro .name {
+    font-size: 94px;
+    font-weight: bold;
+    color: white;
+    margin-top: -30px;
+}
+
+/* UI/UX Designer text styles */
+.uiux-designer {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 24px;
+    font-style: italic;
+    color: white;
+    margin-top: -90px;
+}
+
+/* Background Box styles */
+.background-box {
+    width: 600px;
+    height: 50px;
+    background-color: #6D6F76;
+    position: absolute;
+    top: 400px;
+    left: 400px;
+    z-index: 0;
+    border-radius: 10px;
+}
+
+/* Image Box styles */
+.image-box {
+    width: 306px;
+    height: 450px;
+    background-image: linear-gradient(45deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.3)), url("images/sample-image.jpg");
+    border: 2px solid #2b2b2b;
+    position: absolute;
+    top: 130px;
+    left: 830px;
+    z-index: 1;
+    border-radius: 15px;
+    background-size: cover;
+    background-position: center;
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.3);
+}
+
+/* Quote Box styles */
+.quote-box {
+    width: 550px;
+    height: 150px;
+    background-color: #051623;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    box-sizing: border-box;
+    position: absolute;
+    top: 420px;
+    left: 250px;
+    z-index: 2;
+    border-radius: 10px;
+}
+
+/* Quote text styles */
+.quote-text {
+    font-family: 'Baskerville', serif;
+    font-size: 25px;
+    font-style: italic;
+    color: white;
+    text-align: center;
+    margin: 0;
+    line-height: 1.5;
+}
+
+/* Animation for the page */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
